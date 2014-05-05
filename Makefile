@@ -355,13 +355,13 @@ CHECK		= sparse
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 		  -Wbitwise -Wno-return-void $(CF)
 
-OPTIMISEFLAGS   = -O3 -march=armv7-a -mtune=cortex-a5 -mfpu=neon		  
+OFLAGS   = -O3 -march=armv7-a -mtune=cortex-a5 -mfpu=neon		  
 		  
-CFLAGS_MODULE   =$(OPTIMISEFLAGS)
-AFLAGS_MODULE   =$(OPTIMISEFLAGS)
+CFLAGS_MODULE   = $(OFLAGS)
+AFLAGS_MODULE   = $(OFLAGS)
 LDFLAGS_MODULE  =
-CFLAGS_KERNEL   = $(OPTIMISEFLAGS)
-AFLAGS_KERNEL   = $(OPTIMISEFLAGS)
+CFLAGS_KERNEL   = $(OFLAGS)
+AFLAGS_KERNEL   = $(OFLAGS)
 CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage
 
 
