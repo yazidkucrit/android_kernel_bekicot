@@ -204,15 +204,6 @@ config CPU_FREQ_DEFAULT_GOV_ABYSSPLUG
          the help section of the driver. Fallback governor will be the
          performance governor.
 
-config CPU_FREQ_DEFAULT_GOV_PEGASUSQ
-        bool "pegasusq"
-        help
-        A modified ondemand governor.
-
-config CPU_FREQ_DEFAULT_GOV_PEGASUSQ
-        bool "pegasusq"
-        select CPU_FREQ_GOV_PEGASUSQ
-
 config CPU_FREQ_DEFAULT_GOV_LAZY
     bool "lazy"
         select CPU_FREQ_GOV_LAZY
@@ -730,11 +721,6 @@ config CPU_FREQ_GOV_ADAPTIVE
          For details, take a look at linux/Documentation/cpu-freq.
 
          If in doubt, say N.
-
-config CPU_FREQ_GOV_PEGASUSQ
-        tristate "'pegasusq' cpufreq policy governor"        
-        help        
-         'pegasusq' - CPU governor.
 
 config CPU_FREQ_GOV_GALLIMAUFRY
         tristate "'gallimaufry' governor"

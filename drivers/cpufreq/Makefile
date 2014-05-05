@@ -23,7 +23,6 @@ obj-$(CONFIG_CPU_FREQ_GOV_PEGASUSQ)        += cpufreq_pegasusq.o
 obj-$(CONFIG_CPU_FREQ_GOV_ASSWAX)        += cpufreq_asswax.o
 obj-$(CONFIG_CPU_FREQ_GOV_INTELLIDEMAND)+= cpufreq_intellidemand.o
 obj-$(CONFIG_CPU_FREQ_GOV_LULZACTIVE)        += cpufreq_lulzactive.o
-obj-$(CONFIG_CPU_FREQ_GOV_PEGASUSQ)        += cpufreq_pegasusq.o
 obj-$(CONFIG_CPU_FREQ_GOV_LAZY)         += cpufreq_lazy.o
 obj-$(CONFIG_CPU_FREQ_GOV_SUPERBAD)         += cpufreq_superbad.o
 obj-$(CONFIG_CPU_FREQ_GOV_ADAPTIVE)         += cpufreq_adaptive.o
@@ -40,7 +39,7 @@ obj-$(CONFIG_CPU_FREQ_GOV_SAKURACTIVE) += cpufreq_sakuractive.o
 obj-$(CONFIG_CPU_FREQ_GOV_SMARTASS)        += cpufreq_smartass.o
 obj-$(CONFIG_CPU_FREQ_GOV_BRAZILIANWAX)        += cpufreq_brazilianwax.o
 obj-$(CONFIG_CPU_FREQ_GOV_SAMSUNG)        += cpufreq_samsung.o
-obj-$(CONFIG_CPU_FREQ_GOV_HYPER)         += cpufreq_HYPER.o 
+obj-$(CONFIG_CPU_FREQ_GOV_HYPER)         += cpufreq_hyper.o 
 
 # CPUfreq cross-arch helpers
 obj-$(CONFIG_CPU_FREQ_TABLE)		+= freq_table.o
