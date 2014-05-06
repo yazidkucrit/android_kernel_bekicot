@@ -192,8 +192,11 @@ SUBARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ \
 # Default value for CROSS_COMPILE is not to prefix executables
 # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
 export KBUILD_BUILDHOST := $(SUBARCH)
-ARCH		?= $(SUBARCH)
-CROSS_COMPILE	?= $(CONFIG_CROSS_COMPILE:"%"=%)
+#ARCH		?= $(SUBARCH)
+ARCH		= arm
+#CROSS_COMPILE	?= $(CONFIG_CROSS_COMPILE:"%"=%)
+CROSS_COMPILE    = /home/lox/Android_Sources/Cyanogenmod/10.2/Platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6/bin/arm-linux-androideabi-
+
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
@@ -352,13 +355,13 @@ CHECK		= sparse
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 		  -Wbitwise -Wno-return-void $(CF)
 
-OPTIMISEFLAGS   = -O3 -march=armv7-a -mtune=cortex-a5 -mfpu=neon		  
+OFLAGS   = -O3 -march=armv7-a -mtune=cortex-a5 -mfpu=neon		  
 		  
-CFLAGS_MODULE   =$(OPTIMISEFLAGS)
-AFLAGS_MODULE   =$(OPTIMISEFLAGS)
+CFLAGS_MODULE   = $(OFLAGS)
+AFLAGS_MODULE   = $(OFLAGS)
 LDFLAGS_MODULE  =
-CFLAGS_KERNEL   = $(OPTIMISEFLAGS)
-AFLAGS_KERNEL   = $(OPTIMISEFLAGS)
+CFLAGS_KERNEL   = $(OFLAGS)
+AFLAGS_KERNEL   = $(OFLAGS)
 CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage
 
 

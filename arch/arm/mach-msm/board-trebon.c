@@ -1487,13 +1487,13 @@ void trebon_chg_connected(enum chg_type chgtype)
 	switch (chgtype) {
 	case USB_CHG_TYPE__SDP:
 #ifdef CONFIG_FORCE_FAST_CHARGE
-    		if (force_fast_charge == 1) {
-				ret = msm_proc_comm(PCOM_CHG_USB_IS_CHARGER_CONNECTED,
-				data1, data2);
-			} else {
-		ret = msm_proc_comm(PCOM_CHG_USB_IS_PC_CONNECTED,
-				data1, data2);
-			}
+		if (force_fast_charge == 1) {
+			ret = msm_proc_comm(PCOM_CHG_USB_IS_CHARGER_CONNECTED,
+					data1, data2);
+		} else {
+			ret = msm_proc_comm(PCOM_CHG_USB_IS_PC_CONNECTED,
+					data1, data2);
+		}
 #else
 		ret = msm_proc_comm(PCOM_CHG_USB_IS_PC_CONNECTED,
 				data1, data2);

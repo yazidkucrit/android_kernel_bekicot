@@ -1,5 +1,5 @@
-android_kernel_bekicot
+android_kernel_samsung_msm7x27a
 ======================
 
 ======================
-KITKAT kernel samsung galaxy Ace Plus (GT-S7500)
+Kernel for samsung galaxy Ace Plus (GT-S7500)
